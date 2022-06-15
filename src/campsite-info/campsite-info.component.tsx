@@ -1,5 +1,6 @@
-import { FunctionComponent } from "react";
+import React, { FunctionComponent } from "react";
+import { CampHeader } from "./components/camp-header";
 
 export const CampsiteInfo: FunctionComponent = () => {
-    return <>foo</>;
+    return <CampHeader region="region" park="park" zone="zone" site="site" logout={() => {}}/>;
 };
