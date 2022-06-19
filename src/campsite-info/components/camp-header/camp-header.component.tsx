@@ -1,12 +1,15 @@
-import React, { FunctionComponent } from "react";
-import type { CampHeaderProps } from ".";
-import Button from "@mui/material/Button";
+import React, { FunctionComponent } from 'react';
+import { type CampHeaderProps } from '.';
+import { Button, Box } from '@mui/material';
+import { headerStyles, navStyles } from './camp-header.styles';
 
 export const CampHeader: FunctionComponent<CampHeaderProps> = ({ region, park, zone, site, logout }) => {
-    return (
-        <nav>
-            <div className="breadcrumbs">{region}/{park}/{zone}/{site}</div>
-            <Button onClick={logout}>Logout</Button>
-        </nav>
-    );
+  return (
+    <Box sx={headerStyles} component="header">
+      <Box sx={navStyles} component="nav">
+        <div>{region}/{park}/{zone}/{site}</div>
+        <Button onClick={logout}>Logout</Button>
+      </Box>
+    </Box>
+  );
 };

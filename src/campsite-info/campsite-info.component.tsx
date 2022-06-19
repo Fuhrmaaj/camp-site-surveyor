@@ -1,11 +1,11 @@
-import React, { FunctionComponent } from "react";
-import { CampHeader } from "./components/camp-header";
-import { CampDescription } from "./components/camp-description";
+import React, { FunctionComponent } from 'react';
+import { CampHeader } from './components/camp-header';
+import { CampDescription } from './components/camp-description';
 
 export const CampsiteInfo: FunctionComponent = () => {
   return (
     <div>
-      <CampHeader region="region" park="park" zone="zone" site="site" logout={() => {}}/>
+      <CampHeader region="region" park="park" zone="zone" site="site" logout={() => {}}/> // eslint-disable-line @typescript-eslint/no-empty-function
       <CampDescription description="description about campsite"/>
     </div>
   );
