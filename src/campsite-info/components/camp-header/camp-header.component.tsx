@@ -7,7 +7,7 @@ export const CampHeader: FunctionComponent<CampHeaderProps> = ({ region, park, z
   return (
     <Box sx={headerStyles} component="header">
       <Box sx={navStyles} component="nav">
-        <div className="breadcrumbs">{region}/{park}/{zone}/{site}</div>
+        <div>{region}/{park}/{zone}/{site}</div>
         <Button onClick={logout}>Logout</Button>
       </Box>
     </Box>
