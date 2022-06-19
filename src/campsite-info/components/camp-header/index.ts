@@ -1,2 +1,2 @@
 export { CampHeader } from "./camp-header.component";
-export type { CampHeaderProps } from "./camp-header.types";
+export { type CampHeaderProps } from "./camp-header.types";

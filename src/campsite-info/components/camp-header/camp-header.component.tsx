@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from "react";
-import type { CampHeaderProps } from ".";
+import { type CampHeaderProps } from ".";
 import Button from "@mui/material/Button";
 
 export const CampHeader: FunctionComponent<CampHeaderProps> = ({ region, park, zone, site, logout }) => {
