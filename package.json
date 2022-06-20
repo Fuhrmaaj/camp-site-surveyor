@@ -45,10 +45,7 @@
   },
   "devDependencies": {
     "@types/eslint": "^8.4.3",
-<<<<<<< HEAD
-=======
     "@types/material-ui": "^0.21.12",
->>>>>>> eebf539377b440e8a5f24e65ac7e23233f54ac5f
     "@typescript-eslint/parser": "^5.27.1",
     "eslint": "^8.17.0",
     "eslint-config-google": "^0.14.0"
