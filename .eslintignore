@@ -1,2 +1,6 @@
 ./src/reportWebVitals.ts
+<<<<<<< HEAD
 ./.eslintrc.cjs
+=======
+./.eslintrc.cjs
+>>>>>>> eebf539377b440e8a5f24e65ac7e23233f54ac5f
