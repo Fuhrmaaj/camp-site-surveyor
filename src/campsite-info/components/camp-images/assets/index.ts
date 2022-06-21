@@ -1,9 +1,9 @@
 /* this list is temporarily hard coded
 the server will eventually provide a list of every uploaded image */
-export const images = {
-  A: require('./A.jpg'),
-  B: require('./B.jpg'),
-  C: require('./C.jpg'),
-  D: require('./D.jpg'),
-  E: require('./E.jpg'),
-};
+export const imageArray = [
+  require('./A.jpg'),
+  require('./B.jpg'),
+  require('./C.jpg'),
+  require('./D.jpg'),
+  require('./E.jpg'),
+]
