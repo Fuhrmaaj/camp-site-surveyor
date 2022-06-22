@@ -2,7 +2,7 @@ import React, { FunctionComponent } from 'react';
 import { CampHeader } from './components/camp-header';
 import { CampImages } from './components/camp-images';
 import { Box } from '@mui/material';
-import { graphicsStyles, mapStyles, imageStyles } from './campsite-info.styles'
+import { graphicsStyles, mapStyles, imageStyles } from './campsite-info.styles';
 
 export const CampsiteInfo: FunctionComponent = () => {
     return (
