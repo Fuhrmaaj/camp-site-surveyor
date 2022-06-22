@@ -10,7 +10,7 @@ export const CampsiteInfo: FunctionComponent = () => {
             <CampHeader region="region" park="park" zone="zone" site="site" logout={() => {}}/> {/* eslint-disable-line @typescript-eslint/no-empty-function */}
             <Box sx={graphicsStyles} component="div">
                 <Box sx={mapStyles} component="div">
-                    <div />
+                    <div /> {/* map goes here */}
                 </Box>
                 <Box sx={imageStyles} component="div">
                     <CampImages />

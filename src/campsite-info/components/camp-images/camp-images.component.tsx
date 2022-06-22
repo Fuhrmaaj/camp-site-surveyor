@@ -12,7 +12,7 @@ const CarouselItems = imageArray.map((image) =>
 
 export const CampImages: FunctionComponent = () => {
   return (
-    <Carousel>
+    <Carousel emulateTouch infiniteLoop useKeyboardArrows>
       {CarouselItems}
     </Carousel>
   );
