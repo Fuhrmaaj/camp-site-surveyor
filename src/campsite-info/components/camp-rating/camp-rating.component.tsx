@@ -9,7 +9,7 @@ export const StarRating: FunctionComponent = () => {
   }
   return (
     <div className="StarRating">
-      <Rating onClick={handleRating} ratingValue={rating} />
+      <Rating onClick={handleRating} ratingValue={rating} showTooltip tooltipDefaultText="Your Rating" tooltipArray={["Terrible", "Bad", "Average", "Good", "Awesome!"]}/>
     </div>
   );
 };
