@@ -6,7 +6,6 @@ import { imageArray } from './assets';
 const CarouselItems = imageArray.map((image) => 
   <div>
     <img src={image} alt="" />
-    <p className="legend">Legend {image}</p>
   </div>
 );
 
