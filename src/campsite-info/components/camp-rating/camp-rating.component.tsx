@@ -1,15 +1,43 @@
-import React, { FunctionComponent, useState } from 'react';
-import { Rating } from 'react-simple-star-rating';
+import React from 'react';
+import { Box, Rating } from '@mui/material';
+import StarIcon from '@mui/icons-material/Star'
+import { ratingStyles, tooltipStyles } from './camp-rating.styles';
 
-export const StarRating: FunctionComponent = () => {
-  const [rating, setRating] = useState(0);
-
-  const handleRating = (rate: number) => {
-    setRating(rate)
-  }
-  return (
-    <div className="StarRating">
-      <Rating onClick={handleRating} ratingValue={rating} showTooltip tooltipDefaultText="Your Rating" tooltipArray={["Terrible", "Bad", "Average", "Good", "Awesome!"]}/>
-    </div>
-  );
+const tooltipLabels: { [index: string]: string} = {
+  1: "Terrible",
+  2: "Bad",
+  3: "Average",
+  4: "Good",
+  5: "Awesome!",
 };
+
+function getLabelText(value: number) {
+  return `${value} Star${value !== 1 ? 's' : ''}, ${tooltipLabels[value]}`;
+}
+
+export const StarRating = () => {
+  const [value, setValue] = React.useState<number | null>(0); //this line shows the default rating
+  const [hover, setHover] = React.useState(-1);
+
+  return (
+    <Box sx={ratingStyles} >
+      <Rating
+        name="hover-feedback"
+        value={value}
+        getLabelText = {getLabelText}
+        onChange={(event, newValue) => {
+          setValue(newValue);
+        }}
+        onChangeActive={(event, newHover) => {
+          setHover(newHover);
+        }}
+        emptyIcon={<StarIcon style={{ opacity: 0.55}} fontSize="inherit" />}
+      />
+      {value !== null && (
+        <Box sx={tooltipStyles}>
+          {tooltipLabels[hover !== -1 ? hover: value]}
+        </Box>
+      )}
+    </Box>
+  );
+}
