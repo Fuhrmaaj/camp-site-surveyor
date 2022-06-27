@@ -5,6 +5,6 @@ export const ratingStyles = {
 }
 
 export const tooltipStyles = { 
-  ml: 0,
+  marginLeft: 0,
   padding: "0px 8px",
 }

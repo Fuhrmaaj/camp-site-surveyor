@@ -16,7 +16,7 @@ function getLabelText(value: number) {
 }
 
 export const StarRating = () => {
-  const [value, setValue] = React.useState<number | null>(0); //this line shows the default rating
+  const [value, setValue] = React.useState<number | null>(0);
   const [hover, setHover] = React.useState(-1);
 
   return (
