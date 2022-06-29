@@ -1,5 +1,6 @@
 export const graphicsStyles = {
   display: "flex",
+  flexWrap: "wrap",
   justifyContent: "space-between",
   alignItems: "center",
   maxWidth: "1400px",
@@ -8,11 +9,11 @@ export const graphicsStyles = {
 }
 
 export const mapStyles = {
-  width: "50%",
+  width: "696px",
   padding: "2px"
 }
 
 export const imageStyles = {
-  width: "50%",
+  width: "696px",
   padding: "2px"
 }
