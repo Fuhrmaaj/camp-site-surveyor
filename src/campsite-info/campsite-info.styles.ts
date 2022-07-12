@@ -1,19 +1,20 @@
 export const graphicsStyles = {
-  display: "flex",
-  flexWrap: "wrap",
-  justifyContent: "space-between",
-  alignItems: "center",
-  maxWidth: "1400px",
-  margin: "auto",
-  padding: "4px"
-}
+  display: 'flex',
+  flexWrap: 'wrap',
+  justifyContent: 'center',
+  maxWidth: '1400px',
+  margin: 'auto',
+  padding: '2px',
+};
 
 export const mapStyles = {
-  width: "696px",
-  padding: "2px"
-}
+  flexShrink: 1,
+  width: '696px',
+  padding: '2px',
+};
 
 export const imageStyles = {
-  width: "696px",
-  padding: "2px"
-}
+  flexShrink: 1,
+  width: '696px',
+  padding: '2px',
+};

@@ -1,1 +1,1 @@
-export { SiteMap } from './campsite-map.component';
+export { CampMap } from './camp-map.component';
