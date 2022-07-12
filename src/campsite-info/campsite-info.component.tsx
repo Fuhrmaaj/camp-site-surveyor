@@ -1,8 +1,9 @@
 import React, { FunctionComponent } from 'react';
 import { CampHeader } from './components/camp-header';
 import { CampImages } from './components/camp-images';
+import { CampDescription } from './components/camp-description';
 import { Box } from '@mui/material';
-import { graphicsStyles, mapStyles, imageStyles } from './campsite-info.styles'
+import { graphicsStyles, mapStyles, imageStyles } from './campsite-info.styles';
 
 export const CampsiteInfo: FunctionComponent = () => {
     return (
@@ -15,7 +16,8 @@ export const CampsiteInfo: FunctionComponent = () => {
                 <Box sx={imageStyles} component="div">
                     <CampImages />
                 </Box>
-            </Box>            
+            </Box>  
+            <CampDescription />
         </div>
     );
 };
