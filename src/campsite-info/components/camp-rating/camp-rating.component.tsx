@@ -1,9 +1,8 @@
 import React from 'react';
 import { Box, Rating } from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
-import { tooltipLabels } from './camp-rating.constants';
-import { getLabelText } from './camp-rating.utils';
-import { ratingStyles, tooltipStyles } from './camp-rating.styles';
+import { DisplayLabelText, GetLabelText } from './camp-rating.utils';
+import { ratingStyles } from './camp-rating.styles';
 
 export const StarRating = () => {
   const [value, setValue] = React.useState<number | null>(0);
@@ -14,7 +13,7 @@ export const StarRating = () => {
       <Rating
         name="hover-feedback"
         value={value}
-        getLabelText = {getLabelText}
+        getLabelText = {GetLabelText}
         onChange={(event, newValue) => {
           setValue(newValue);
         }}
@@ -23,11 +22,7 @@ export const StarRating = () => {
         }}
         emptyIcon={<StarIcon style={{ opacity: 0.55}} fontSize="inherit" />}
       />
-      {value !== null && (
-        <Box sx={tooltipStyles}>
-          {tooltipLabels[hover !== -1 ? hover: value]}
-        </Box>
-      )}
+      {value !== null && DisplayLabelText(value, hover)}
     </Box>
   );
 }
