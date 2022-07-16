@@ -2,11 +2,8 @@ import React from 'react';
 import { Box, Rating } from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
 import { tooltipLabels } from './camp-rating.constants';
+import { getLabelText } from './camp-rating.utils';
 import { ratingStyles, tooltipStyles } from './camp-rating.styles';
-
-function getLabelText(value: number) {
-  return `${value} Star${value !== 1 ? 's' : ''}, ${tooltipLabels[value]}`;
-}
 
 export const StarRating = () => {
   const [value, setValue] = React.useState<number | null>(0);
