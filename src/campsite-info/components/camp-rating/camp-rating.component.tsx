@@ -1,15 +1,8 @@
 import React from 'react';
 import { Box, Rating } from '@mui/material';
-import StarIcon from '@mui/icons-material/Star'
+import StarIcon from '@mui/icons-material/Star';
+import { tooltipLabels } from './camp-rating.constants';
 import { ratingStyles, tooltipStyles } from './camp-rating.styles';
-
-const tooltipLabels: { [index: string]: string} = {
-  1: "Terrible",
-  2: "Bad",
-  3: "Average",
-  4: "Good",
-  5: "Awesome!",
-};
 
 function getLabelText(value: number) {
   return `${value} Star${value !== 1 ? 's' : ''}, ${tooltipLabels[value]}`;
