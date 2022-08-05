@@ -1,7 +1,7 @@
 import React from 'react';
 import { Box, Rating } from '@mui/material';
 import StarIcon from '@mui/icons-material/Star';
-import { GetLabelText } from './camp-rating.utils';
+import { getLabelText } from './camp-rating.utils';
 import { DisplayLabelText } from './display-label-text.component';
 import { ratingStyles } from './camp-rating.styles';
 
@@ -14,7 +14,7 @@ export const StarRating = () => {
       <Rating
         name="hover-feedback"
         value={value}
-        getLabelText={GetLabelText}
+        getLabelText={getLabelText}
         onChange={(event, newValue) => {
           setValue(newValue);
         }}
