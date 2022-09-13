@@ -1,1 +1,1 @@
-export {CampsiteInfo} from './campsite-info.component';
+export { CampsiteInfo } from './campsite-info.component';
