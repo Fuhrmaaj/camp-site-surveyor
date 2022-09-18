@@ -1,21 +1,14 @@
 import React, { FunctionComponent, useEffect, useState } from 'react';
 import axios from 'axios';
 import { Box } from '@mui/material';
+import { type CampsiteProps } from '.';
 import { CampHeader } from './components/camp-header';
 import { CampImages } from './components/camp-images';
 import { CampMap } from './components/camp-map';
 import { graphicsStyles, mapStyles, imageStyles } from './campsite-info.styles';
 
-interface Campsite {
-  images: string[];
-  location: { lat: number; long: number };
-  name: string;
-  rating: number;
-  uuid: string;
-}
-
 export const CampsiteInfo: FunctionComponent = () => {
-  const [campsite, setCampsite] = useState<Campsite | null>(null);
+  const [campsite, setCampsite] = useState<CampsiteProps | null>(null);
   
   useEffect(() => {
     const dataGetter = async () => {
