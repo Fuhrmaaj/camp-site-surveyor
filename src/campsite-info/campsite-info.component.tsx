@@ -13,7 +13,7 @@ export const CampsiteInfo: FunctionComponent = () => {
               park="park"
               zone="zone"
               site="site"
-              logout={() => {undefined}}
+              logout={() => undefined}
       />
       <Box sx={graphicsStyles} component="div">
         <Box sx={mapStyles} component="div">
