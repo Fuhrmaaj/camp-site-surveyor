@@ -1,8 +1,9 @@
 import React, { FunctionComponent, useEffect, useState } from 'react';
 import axios from 'axios';
+import { Box } from '@mui/material';
 import { CampHeader } from './components/camp-header';
 import { CampImages } from './components/camp-images';
-import { Box } from '@mui/material';
+import { CampMap } from './components/camp-map';
 import { graphicsStyles, mapStyles, imageStyles } from './campsite-info.styles';
 
 interface Campsite {
@@ -15,7 +16,7 @@ interface Campsite {
 
 export const CampsiteInfo: FunctionComponent = () => {
   const [campsite, setCampsite] = useState<Campsite | null>(null);
-
+  
   useEffect(() => {
     const dataGetter = async () => {
       const data = await axios.get(
@@ -28,24 +29,22 @@ export const CampsiteInfo: FunctionComponent = () => {
 
     dataGetter();
   }, []);
-
+  
   return (
     <div>
       <CampHeader
-        region="region"
-        park="park"
-        zone="zone"
-        site="site"
-        logout={() => {
-          null;
-        }}
+              region="region"
+              park="park"
+              zone="zone"
+              site="site"
+              logout={() => undefined}
       />
       <Box sx={graphicsStyles} component="div">
         <Box sx={mapStyles} component="div">
-          <div /> {/* map goes here */}
+          <CampMap />
         </Box>
         <Box sx={imageStyles} component="div">
-          *<CampImages images={ campsite?.images } />
+          <CampImages images={ campsite?.images } />
         </Box>
       </Box>
     </div>
