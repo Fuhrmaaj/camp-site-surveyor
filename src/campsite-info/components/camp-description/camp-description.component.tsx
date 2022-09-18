@@ -4,7 +4,7 @@ import { descriptionStyles } from './camp-description.styles';
 
 export const CampDescription = () => {
   return (
-    <Box sx={descriptionStyles} component="body">
+    <Box sx={descriptionStyles} component="div">
       <h2>Description</h2>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sodales
