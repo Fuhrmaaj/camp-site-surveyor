@@ -1,8 +1,8 @@
 import React, { FunctionComponent } from 'react';
+import { Box } from '@mui/material';
 import { CampHeader } from './components/camp-header';
 import { CampImages } from './components/camp-images';
 import { CampMap } from './components/camp-map';
-import { Box } from '@mui/material';
 import { graphicsStyles, mapStyles, imageStyles } from './campsite-info.styles';
 
 export const CampsiteInfo: FunctionComponent = () => {
