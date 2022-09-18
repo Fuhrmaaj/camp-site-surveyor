@@ -24,7 +24,6 @@ export const CampsiteInfo: FunctionComponent = () => {
       );
       const parsedData = JSON.parse(data.data);
       setCampsite(parsedData);
-      console.log(parsedData);
     };
 
     dataGetter();
