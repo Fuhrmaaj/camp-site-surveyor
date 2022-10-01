@@ -4,6 +4,7 @@ import { CampHeader } from './components/camp-header';
 import { CampImages } from './components/camp-images';
 import { CampMap } from './components/camp-map';
 import { graphicsStyles, mapStyles, imageStyles } from './campsite-info.styles';
+import { CampDescription } from './components/camp-description';
 
 export const CampsiteInfo: FunctionComponent = () => {
   return (
@@ -23,6 +24,7 @@ export const CampsiteInfo: FunctionComponent = () => {
           <CampImages />
         </Box>
       </Box>
+      <CampDescription />
     </div>
   );
 };
