@@ -1,5 +1,7 @@
-import React, { FunctionComponent } from 'react';
+import React, { FunctionComponent, useEffect, useState } from 'react';
+import axios from 'axios';
 import { Box } from '@mui/material';
+import { type CampsiteProps } from '.';
 import { CampHeader } from './components/camp-header';
 import { CampImages } from './components/camp-images';
 import { CampMap } from './components/camp-map';
@@ -7,6 +9,20 @@ import { graphicsStyles, mapStyles, imageStyles } from './campsite-info.styles';
 import { CampDescription } from './components/camp-description';
 
 export const CampsiteInfo: FunctionComponent = () => {
+  const [campsite, setCampsite] = useState<CampsiteProps | null>(null);
+  
+  useEffect(() => {
+    const dataGetter = async () => {
+      const data = await axios.get(
+        'http://localhost:3001/v1/camp-sites/:campSiteId'
+      );
+      const parsedData = JSON.parse(data.data);
+      setCampsite(parsedData);
+    };
+
+    dataGetter();
+  }, []);
+  
   return (
     <div>
       <CampHeader
@@ -21,7 +37,7 @@ export const CampsiteInfo: FunctionComponent = () => {
           <CampMap />
         </Box>
         <Box sx={imageStyles} component="div">
-          <CampImages />
+          <CampImages images={ campsite?.images } />
         </Box>
       </Box>
       <CampDescription />
